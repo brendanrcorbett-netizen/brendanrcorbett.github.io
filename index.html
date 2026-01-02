@@ -1,12 +1,218 @@
-<!-- force rebuild -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brendan Corbett - Computer Programmer | Building elegant solutions through clean code">
+  <title>Brendan Corbett | Computer Programmer</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>It works!</h1>
-  <p>My GitHub Pages portfolio is live.</p>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#" class="logo">BC</a>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-container">
+        <h1 class="hero-title">Brendan Corbett</h1>
+        <p class="hero-subtitle">Computer Programmer</p>
+        <p class="hero-statement">Transforming complex problems into elegant, efficient solutions. I craft code that not only works—it inspires.</p>
+        <a href="#contact" class="hero-cta">Let's Build Something Great</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="section-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            I'm a passionate computer programmer who believes that great software is born at the intersection of creativity and precision. With a keen eye for detail and a love for clean architecture, I build applications that stand the test of time.
+          </p>
+          <p class="about-text">
+            Whether working with a team or flying solo, I bring dedication, curiosity, and a problem-solving mindset to every project. I'm constantly exploring new technologies and methodologies to deliver the best possible solutions.
+          </p>
+          <p class="about-text">
+            When I'm not coding, you'll find me contributing to open-source projects, mentoring fellow developers, or diving deep into the latest tech trends.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+      <div class="section-container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <h3 class="skill-category">Languages</h3>
+            <ul class="skill-list">
+              <li class="skill-item">JavaScript / TypeScript</li>
+              <li class="skill-item">Python</li>
+              <li class="skill-item">Java</li>
+              <li class="skill-item">C#</li>
+              <li class="skill-item">HTML5 / CSS3</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3 class="skill-category">Frameworks & Libraries</h3>
+            <ul class="skill-list">
+              <li class="skill-item">React / Next.js</li>
+              <li class="skill-item">Node.js / Express</li>
+              <li class="skill-item">Django / Flask</li>
+              <li class="skill-item">Spring Boot</li>
+              <li class="skill-item">.NET Core</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3 class="skill-category">Tools & Platforms</h3>
+            <ul class="skill-list">
+              <li class="skill-item">Git / GitHub</li>
+              <li class="skill-item">Docker / Kubernetes</li>
+              <li class="skill-item">AWS / Azure</li>
+              <li class="skill-item">PostgreSQL / MongoDB</li>
+              <li class="skill-item">CI/CD Pipelines</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <h3 class="skill-category">Soft Skills</h3>
+            <ul class="skill-list">
+              <li class="skill-item">Problem Solving</li>
+              <li class="skill-item">Team Collaboration</li>
+              <li class="skill-item">Technical Communication</li>
+              <li class="skill-item">Agile Methodologies</li>
+              <li class="skill-item">Continuous Learning</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section" id="projects">
+      <div class="section-container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-image-placeholder"></div>
+            <div class="project-content">
+              <h3 class="project-title">Project Alpha</h3>
+              <p class="project-description">A full-stack web application showcasing modern development practices with responsive design and RESTful API integration.</p>
+              <ul class="project-tech">
+                <li class="tech-tag">React</li>
+                <li class="tech-tag">Node.js</li>
+                <li class="tech-tag">PostgreSQL</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link">View Live</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image-placeholder"></div>
+            <div class="project-content">
+              <h3 class="project-title">Project Beta</h3>
+              <p class="project-description">An automation tool that streamlines workflow processes, reducing manual tasks by 60% and improving team productivity.</p>
+              <ul class="project-tech">
+                <li class="tech-tag">Python</li>
+                <li class="tech-tag">Docker</li>
+                <li class="tech-tag">AWS</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link">View Live</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-image-placeholder"></div>
+            <div class="project-content">
+              <h3 class="project-title">Project Gamma</h3>
+              <p class="project-description">A mobile-first progressive web app featuring offline capabilities, push notifications, and seamless user experience.</p>
+              <ul class="project-tech">
+                <li class="tech-tag">TypeScript</li>
+                <li class="tech-tag">Next.js</li>
+                <li class="tech-tag">MongoDB</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" class="project-link">View Live</a>
+                <a href="#" class="project-link">Source Code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+      <div class="section-container">
+        <h2 class="section-title">Services</h2>
+        <p class="services-intro">Available for freelance projects and collaborations. Let's bring your vision to life.</p>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">Custom websites and web applications built with modern technologies. From landing pages to complex platforms, I deliver responsive, performant solutions.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-title">API Development</h3>
+            <p class="service-description">Robust, scalable APIs designed for reliability. RESTful or GraphQL—architected for your specific needs with comprehensive documentation.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-title">Code Review & Consulting</h3>
+            <p class="service-description">Expert analysis of your codebase with actionable recommendations. Identify bottlenecks, security concerns, and opportunities for optimization.</p>
+          </article>
+          <article class="service-card">
+            <h3 class="service-title">Technical Mentorship</h3>
+            <p class="service-description">One-on-one guidance for aspiring developers. Personalized learning paths, code reviews, and career advice to accelerate your growth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="section-container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="contact-intro">Have a project in mind or just want to connect? I'd love to hear from you.</p>
+        <div class="contact-methods">
+          <a href="mailto:hello@brendancorbett.dev" class="contact-link contact-email">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">hello@brendancorbett.dev</span>
+          </a>
+          <a href="https://github.com/brendanrcorbett-netizen" class="contact-link contact-github">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@brendanrcorbett-netizen</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-text">&copy; 2026 Brendan Corbett. Crafted with care and clean code.</p>
+      <nav class="footer-nav">
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><a href="#hero" class="footer-nav-link">Back to Top</a></li>
+          <li class="footer-nav-item"><a href="https://github.com/brendanrcorbett-netizen" class="footer-nav-link">GitHub</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
