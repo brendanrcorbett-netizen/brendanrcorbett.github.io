@@ -8,9 +8,10 @@
   --color-bg-dark: #1a1a2e;
   --color-text: #2d2d2d;
   --color-text-light: #5a5a5a;
-  --color-text-muted: #888888;
+  --color-text-muted: #9ca3af;
   --color-text-inverse: #f5f5f5;
-  
+  --color-card: #ffffff;
+   
   /* Accent Color - Teal */
   --color-accent: #0d9488;
   --color-accent-hover: #0f766e;
@@ -44,6 +45,21 @@
   --transition-fast:  150ms ease;
   --transition-base: 250ms ease;
 }
+
+
+   [data-theme="dark"] {
+  --color-bg: #0f172a;
+  --color-text: #e5e7eb;
+  --color-muted: #9ca3af;
+  --color-card: #111827;
+  --color-border: #1f2933;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
 
 /* ================================
    CSS Reset & Base Styles
