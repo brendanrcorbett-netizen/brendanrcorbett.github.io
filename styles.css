@@ -172,6 +172,37 @@ a:hover {
 }
 
 /* ================================
+   Theme Toggle Button
+   ================================ */
+.theme-toggle {
+  background: none;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-base);
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+}
+
+.theme-toggle-icon::before {
+  content: "🌙";
+  font-size: 1.25rem;
+}
+
+/* Show sun icon when in dark mode */
+[data-theme="dark"] .theme-toggle-icon::before {
+  content: "☀️";
+}
+
+/* ================================
    Main Content & Sections
    ================================ */
 .main-content {
