@@ -22,6 +22,7 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
   
   /* Typography */
   --font-family:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -42,24 +43,46 @@
   --radius-full: 50%;
   
   /* Transitions */
-  --transition-fast:  150ms ease;
+  --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(13, 148, 136, 0.4);
 }
 
 
-   [data-theme="dark"] {
+[data-theme="dark"] {
   --color-bg: #0f172a;
+  --color-bg-alt: #1e293b;
   --color-text: #e5e7eb;
+  --color-text-light: #cbd5e1;
   --color-muted: #9ca3af;
   --color-card: #111827;
-  --color-border: #1f2933;
+  --color-border: #334155;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --focus-ring: 0 0 0 3px rgba(13, 148, 136, 0.5);
 }
 
-body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+/* ================================
+   Global Theme Transitions
+   ================================ */
+body,
+.site-header,
+.skill-card,
+.project-card,
+.service-card,
+.contact-link,
+.site-footer {
+  transition: 
+    background-color var(--transition-smooth),
+    color var(--transition-smooth),
+    border-color var(--transition-smooth),
+    box-shadow var(--transition-smooth);
 }
-
 
 /* ================================
    CSS Reset & Base Styles
@@ -74,7 +97,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  -webkit-text-size-adjust:  100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -100,7 +123,9 @@ ul {
 a {
   color: var(--color-accent);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: 
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 a:hover {
@@ -134,15 +159,18 @@ a:hover {
   font-weight: 700;
   color: var(--color-text);
   letter-spacing: -0.5px;
-  padding:  var(--spacing-xs) var(--spacing-sm);
-  border:  2px solid var(--color-accent);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 2px solid var(--color-accent);
   border-radius: var(--radius-sm);
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast);
 }
 
 .logo:hover {
   background-color: var(--color-accent);
   color: var(--color-text-inverse);
+  transform: translateY(-1px);
 }
 
 .main-nav {
@@ -163,12 +191,15 @@ a:hover {
   font-weight: 500;
   color: var(--color-text-light);
   border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  transition: 
+    all var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .nav-link:hover {
   color: var(--color-accent);
   background-color: var(--color-accent-light);
+  transform: translateY(-1px);
 }
 
 /* ================================
@@ -184,17 +215,26 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .theme-toggle:hover {
   border-color: var(--color-accent);
   background-color: var(--color-accent-light);
+  transform: scale(1.05);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
 }
 
 .theme-toggle-icon::before {
   content: "🌙";
   font-size: 1.25rem;
+  transition: transform var(--transition-base);
 }
 
 /* Show sun icon when in dark mode */
@@ -217,21 +257,27 @@ a:hover {
 
 .section-title {
   font-size: 1.75rem;
-  font-weight:  700;
+  font-weight: 700;
   color: var(--color-text);
   margin-bottom: var(--spacing-lg);
   text-align: center;
   position: relative;
+  transition: color var(--transition-smooth);
 }
 
-. section-title::after {
+.section-title::after {
   content: "";
   display: block;
   width: 60px;
   height: 3px;
-  background-color:  var(--color-accent);
+  background-color: var(--color-accent);
   margin: var(--spacing-sm) auto 0;
   border-radius: var(--radius-full);
+  transition: width var(--transition-base);
+}
+
+.section-title:hover::after {
+  width: 80px;
 }
 
 /* ================================
@@ -284,15 +330,23 @@ a:hover {
   color: var(--color-text-inverse);
   background-color: var(--color-accent);
   border-radius: var(--radius-md);
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
   animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
-. hero-cta:hover {
+.hero-cta:hover {
   background-color: var(--color-accent-hover);
   color: var(--color-text-inverse);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.hero-cta:active {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
 }
 
 /* ================================
@@ -300,6 +354,7 @@ a:hover {
    ================================ */
 .about-section {
   background-color: var(--color-bg-alt);
+  transition: background-color var(--transition-smooth);
 }
 
 .about-content {
@@ -312,9 +367,10 @@ a:hover {
   color: var(--color-text-light);
   margin-bottom: var(--spacing-md);
   text-align: center;
+  transition: color var(--transition-smooth);
 }
 
-.about-text: last-child {
+.about-text:last-child {
   margin-bottom: 0;
 }
 
@@ -322,7 +378,8 @@ a:hover {
    Skills Section
    ================================ */
 .skills-section {
-  background-color:  var(--color-bg);
+  background-color: var(--color-bg);
+  transition: background-color var(--transition-smooth);
 }
 
 .skills-grid {
@@ -336,12 +393,16 @@ a:hover {
   padding: var(--spacing-md);
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .skill-card:hover {
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+  border-color: var(--color-accent-light);
 }
 
 .skill-category {
@@ -351,6 +412,11 @@ a:hover {
   margin-bottom: var(--spacing-sm);
   padding-bottom: var(--spacing-xs);
   border-bottom: 2px solid var(--color-accent-light);
+  transition: border-color var(--transition-smooth);
+}
+
+.skill-card:hover .skill-category {
+  border-bottom-color: var(--color-accent);
 }
 
 .skill-list {
@@ -364,21 +430,30 @@ a:hover {
   color: var(--color-text-light);
   padding-left: var(--spacing-sm);
   position: relative;
+  transition: 
+    color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
-.skill-item:: before {
+.skill-item::before {
   content: "▸";
   position: absolute;
   left: 0;
   color: var(--color-accent);
   font-size: 0.8rem;
+  transition: transform var(--transition-fast);
+}
+
+.skill-card:hover .skill-item::before {
+  transform: translateX(2px);
 }
 
 /* ================================
    Projects Section
    ================================ */
 .projects-section {
-  background-color:  var(--color-bg-alt);
+  background-color: var(--color-bg-alt);
+  transition: background-color var(--transition-smooth);
 }
 
 .projects-grid {
@@ -392,28 +467,45 @@ a:hover {
   border-radius: var(--radius-lg);
   overflow: hidden;
   border: 1px solid var(--color-border);
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .project-card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-6px);
+  border-color: var(--color-accent-light);
 }
 
 .project-image-placeholder {
   height: 180px;
-  background:  linear-gradient(135deg, var(--color-bg-dark) 0%, #16213e 50%, var(--color-accent) 100%);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #16213e 50%, var(--color-accent) 100%);
   position: relative;
+  transition: transform var(--transition-base);
 }
 
-.project-image-placeholder:: after {
+.project-card:hover .project-image-placeholder {
+  transform: scale(1.02);
+}
+
+.project-image-placeholder::after {
   content: "📁";
   position: absolute;
   top: 50%;
-  left:  50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
   opacity: 0.5;
+  transition: 
+    opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.project-card:hover .project-image-placeholder::after {
+  opacity: 0.7;
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .project-content {
@@ -422,9 +514,14 @@ a:hover {
 
 .project-title {
   font-size: 1.25rem;
-  font-weight:  600;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--spacing-xs);
+  transition: color var(--transition-smooth);
+}
+
+.project-card:hover .project-title {
+  color: var(--color-accent);
 }
 
 .project-description {
@@ -432,6 +529,7 @@ a:hover {
   color: var(--color-text-light);
   margin-bottom: var(--spacing-sm);
   line-height: 1.6;
+  transition: color var(--transition-smooth);
 }
 
 .project-tech {
@@ -449,25 +547,43 @@ a:hover {
   color: var(--color-accent);
   border-radius: var(--radius-full);
   font-weight: 500;
+  transition: 
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.tech-tag:hover {
+  background-color: var(--color-accent);
+  color: var(--color-text-inverse);
+  transform: translateY(-1px);
 }
 
 .project-links {
   display: flex;
-  gap:  var(--spacing-sm);
+  gap: var(--spacing-sm);
 }
 
 .project-link {
   font-size: 0.9rem;
   font-weight: 500;
   padding: var(--spacing-xs) var(--spacing-sm);
-  border:  1px solid var(--color-accent);
+  border: 1px solid var(--color-accent);
   border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  transition: 
+    all var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .project-link:hover {
   background-color: var(--color-accent);
   color: var(--color-text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.project-link:active {
+  transform: translateY(0);
 }
 
 /* ================================
@@ -475,6 +591,7 @@ a:hover {
    ================================ */
 .services-section {
   background-color: var(--color-bg);
+  transition: background-color var(--transition-smooth);
 }
 
 .services-intro {
@@ -485,10 +602,11 @@ a:hover {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  transition: color var(--transition-smooth);
 }
 
-. services-grid {
-  display:  grid;
+.services-grid {
+  display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-md);
 }
@@ -499,36 +617,46 @@ a:hover {
   border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   text-align: center;
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .service-card:hover {
   border-color: var(--color-accent);
   box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
 }
 
 .service-title {
   font-size: 1.15rem;
-  font-weight:  600;
+  font-weight: 600;
   color: var(--color-text);
   margin-bottom: var(--spacing-sm);
+  transition: color var(--transition-fast);
+}
+
+.service-card:hover .service-title {
+  color: var(--color-accent);
 }
 
 .service-description {
   font-size: 0.95rem;
   color: var(--color-text-light);
   line-height: 1.6;
+  transition: color var(--transition-smooth);
 }
 
 /* ================================
    Contact Section
    ================================ */
 .contact-section {
-  background:  linear-gradient(135deg, var(--color-bg-dark) 0%, #16213e 100%);
+  background: linear-gradient(135deg, var(--color-bg-dark) 0%, #16213e 100%);
   color: var(--color-text-inverse);
 }
 
-.contact-section . section-title {
+.contact-section .section-title {
   color: var(--color-text-inverse);
 }
 
@@ -556,13 +684,21 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-lg);
   color: var(--color-text-inverse);
-  transition: all var(--transition-base);
+  transition: 
+    all var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .contact-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border-color: var(--color-accent);
   color: var(--color-text-inverse);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.contact-link:active {
   transform: translateY(-2px);
 }
 
@@ -573,6 +709,11 @@ a:hover {
   letter-spacing: 1px;
   color: var(--color-accent);
   margin-bottom: var(--spacing-xs);
+  transition: letter-spacing var(--transition-fast);
+}
+
+.contact-link:hover .contact-label {
+  letter-spacing: 1.5px;
 }
 
 .contact-value {
@@ -611,11 +752,15 @@ a:hover {
 .footer-nav-link {
   font-size: 0.9rem;
   color: var(--color-text-muted);
-  transition: color var(--transition-fast);
+  transition: 
+    color var(--transition-fast),
+    transform var(--transition-fast);
+  display: inline-block;
 }
 
 .footer-nav-link:hover {
   color: var(--color-accent);
+  transform: translateY(-1px);
 }
 
 /* ================================
@@ -676,7 +821,7 @@ a:hover {
   }
   
   .contact-link {
-    flex:  1;
+    flex: 1;
   }
   
   .footer-container {
@@ -744,9 +889,42 @@ a:hover {
    ================================ */
 :focus-visible {
   outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+  border-radius: var(--radius-sm);
 }
 
-a:focus: not(:focus-visible) {
+/* Interactive elements focus styles */
+a:focus-visible,
+button:focus-visible,
+.nav-link:focus-visible,
+.project-link:focus-visible,
+.contact-link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+}
+
+/* Card focus styles */
+.skill-card:focus-within,
+.project-card:focus-within,
+.service-card:focus-within {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  box-shadow: var(--focus-ring);
+}
+
+/* Button specific focus */
+.theme-toggle:focus-visible,
+.hero-cta:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  box-shadow: var(--focus-ring);
+}
+
+/* Remove default focus for mouse users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
   outline: none;
+  box-shadow: none;
 }
