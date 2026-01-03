@@ -738,6 +738,79 @@ a:hover {
 }
 
 /* ================================
+   Pricing Anchors Section
+   ================================ */
+
+.pricing-section {
+  padding: var(--spacing-2xl) 0;
+  background-color: var(--color-bg);
+}
+
+.pricing-intro {
+  max-width: 640px;
+  margin: 0 auto var(--spacing-xl);
+  text-align: center;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.pricing-grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+}
+
+.pricing-card {
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-card-featured {
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.pricing-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.pricing-range {
+  font-weight: 700;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+.pricing-description {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.pricing-note {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+/* Tablet & Desktop */
+@media (min-width: 768px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================================
    Contact Section
    ================================ */
 .contact-section {
