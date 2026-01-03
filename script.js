@@ -37,6 +37,41 @@
   }
 
   /**
+   * Update the toggle button icon to reflect current theme
+   * @param {string} theme - 'dark' or 'light'
+   */
+  function updateToggleIcon(theme) {
+    if (!themeToggle) return;
+
+    // Look for icon elements (supports Font Awesome, emoji, or text-based icons)
+    const icon = themeToggle.querySelector('i, span.icon, svg');
+    
+    if (icon) {
+      // Handle Font Awesome icons
+      if (icon.classList.contains('fa-moon') || icon.classList.contains('fa-sun')) {
+        icon.classList.remove('fa-moon', 'fa-sun');
+        icon.classList.add(theme === DARK_THEME ? 'fa-sun' : 'fa-moon');
+      }
+      // Handle other icon libraries with similar class patterns
+      else if (icon.classList.contains('icon-moon') || icon.classList.contains('icon-sun')) {
+        icon.classList.remove('icon-moon', 'icon-sun');
+        icon.classList.add(theme === DARK_THEME ? 'icon-sun' : 'icon-moon');
+      }
+    }
+
+    // Update text content if button uses emoji or text
+    const buttonText = themeToggle.textContent.trim();
+    if (buttonText === '🌙' || buttonText === '☀️') {
+      themeToggle.textContent = theme === DARK_THEME ? '☀️' : '🌙';
+    } else if (buttonText.toLowerCase() === 'dark' || buttonText.toLowerCase() === 'light') {
+      themeToggle.textContent = theme === DARK_THEME ? 'Light' : 'Dark';
+    }
+
+    // Update data attribute for CSS-based icon switching
+    themeToggle.setAttribute('data-theme-active', theme);
+  }
+
+  /**
    * Apply the theme to the document
    * @param {string} theme - 'dark' or 'light'
    */
@@ -46,6 +81,9 @@
     } else {
       htmlElement.removeAttribute('data-theme');
     }
+    
+    // Update toggle button icon
+    updateToggleIcon(theme);
     
     // Update aria-label for accessibility
     if (themeToggle) {
