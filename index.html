@@ -1,323 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Brendan Corbett - Computer Programmer | Building elegant solutions through clean code">
-  <title>Brendan Corbett | Computer Programmer</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="site-header">
-    <div class="header-container">
-      <a href="#" class="logo">BC</a>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
-          <li class="nav-item"><a href="#work-with-me" class="nav-link">Work With Me</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-toggle-icon" aria-hidden="true"></span>
-      </button>
-    </div>
-  </header>
-
-  <main class="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero">
-      <div class="hero-container">
-        <p class="hero-eyebrow">Full-Stack Developer & Problem Solver</p>
-        <h1 class="hero-title">Hi, I'm Brendan Corbett</h1>
-        <p class="hero-statement">I help <strong>startups</strong> and <strong>growing businesses</strong> build modern, reliable web applications that users love.</p>
-        <a href="#contact" class="hero-cta">Get in Touch</a>
-        <a href="#projects" class="hero-cta">See My Work</a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-      <div class="section-container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <p class="about-text">
-            I'm a passionate computer programmer who believes that great software is born at the intersection of creativity and precision. With a keen eye for detail and a love for clean architecture, I build solutions that stand the test of time.
-          </p>
-          <p class="about-text">
-            Whether working with a team or flying solo, I bring dedication, curiosity, and a problem-solving mindset to every project. I'm constantly exploring new technologies and methodologies to stay at the cutting edge of development.
-          </p>
-          <p class="about-text">
-            When I'm not coding, you'll find me contributing to open-source projects, mentoring fellow developers, or diving deep into the latest tech trends.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="skills-section" id="skills">
-      <div class="section-container">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-          <article class="skill-card">
-            <h3 class="skill-category">Languages</h3>
-            <ul class="skill-list">
-              <li class="skill-item">JavaScript / TypeScript</li>
-              <li class="skill-item">Python</li>
-              <li class="skill-item">Java</li>
-              <li class="skill-item">C#</li>
-              <li class="skill-item">HTML5 / CSS3</li>
-            </ul>
-          </article>
-          <article class="skill-card">
-            <h3 class="skill-category">Frameworks & Libraries</h3>
-            <ul class="skill-list">
-              <li class="skill-item">React / Next.js</li>
-              <li class="skill-item">Node.js / Express</li>
-              <li class="skill-item">Django / Flask</li>
-              <li class="skill-item">Spring Boot</li>
-              <li class="skill-item">.NET Core</li>
-            </ul>
-          </article>
-          <article class="skill-card">
-            <h3 class="skill-category">Tools & Platforms</h3>
-            <ul class="skill-list">
-              <li class="skill-item">Git / GitHub</li>
-              <li class="skill-item">Docker / Kubernetes</li>
-              <li class="skill-item">AWS / Azure</li>
-              <li class="skill-item">PostgreSQL / MongoDB</li>
-              <li class="skill-item">CI/CD Pipelines</li>
-            </ul>
-          </article>
-          <article class="skill-card">
-            <h3 class="skill-category">Soft Skills</h3>
-            <ul class="skill-list">
-              <li class="skill-item">Problem Solving</li>
-              <li class="skill-item">Team Collaboration</li>
-              <li class="skill-item">Technical Communication</li>
-              <li class="skill-item">Agile Methodologies</li>
-              <li class="skill-item">Continuous Learning</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-      <div class="section-container">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-          <article class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-content">
-              <h3 class="project-title">Contractor Lead Website</h3>
-              <p class="project-description">A conversion-focused website template designed for local service contractors. Built to turn visitors into leads with clear calls-to-action, trust signals, and mobile-first design.</p>
-              <ul class="project-features">
-                <li class="feature-item">Quote request form with email notifications</li>
-                <li class="feature-item">Service area & testimonials sections</li>
-                <li class="feature-item">SEO-optimized for local search</li>
-                <li class="feature-item">Fast load times & mobile responsive</li>
-              </ul>
-              <ul class="project-tech">
-                <li class="tech-tag">HTML5</li>
-                <li class="tech-tag">CSS3</li>
-                <li class="tech-tag">JavaScript</li>
-                <li class="tech-tag">Formspree</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">View Demo</a>
-                <a href="#" class="project-link">Source Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-content">
-              <h3 class="project-title">Project Beta</h3>
-              <p class="project-description">An automation tool that streamlines workflow processes, reducing manual tasks by 60% and improving team productivity.</p>
-              <ul class="project-tech">
-                <li class="tech-tag">Python</li>
-                <li class="tech-tag">Docker</li>
-                <li class="tech-tag">AWS</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">View Live</a>
-                <a href="#" class="project-link">Source Code</a>
-              </div>
-            </div>
-          </article>
-          <article class="project-card">
-            <div class="project-image-placeholder"></div>
-            <div class="project-content">
-              <h3 class="project-title">Project Gamma</h3>
-              <p class="project-description">A mobile-first progressive web app featuring offline capabilities, push notifications, and seamless user experience.</p>
-              <ul class="project-tech">
-                <li class="tech-tag">TypeScript</li>
-                <li class="tech-tag">Next.js</li>
-                <li class="tech-tag">MongoDB</li>
-              </ul>
-              <div class="project-links">
-                <a href="#" class="project-link">View Live</a>
-                <a href="#" class="project-link">Source Code</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services-section" id="services">
-      <div class="section-container">
-        <h2 class="section-title">Services</h2>
-        <p class="services-intro">Available for freelance projects and collaborations. Let's bring your vision to life.</p>
-        <div class="services-grid">
-          <article class="service-card">
-            <h3 class="service-title">Web Development</h3>
-            <p class="service-description">Custom websites and web applications built with modern technologies. From landing pages to complex platforms, I deliver responsive, performant solutions.</p>
-          </article>
-          <article class="service-card">
-            <h3 class="service-title">API Development</h3>
-            <p class="service-description">Robust, scalable APIs designed for reliability. RESTful or GraphQL—architected for your specific needs with comprehensive documentation.</p>
-          </article>
-          <article class="service-card">
-            <h3 class="service-title">Code Review & Consulting</h3>
-            <p class="service-description">Expert analysis of your codebase with actionable recommendations. Identify bottlenecks, security concerns, and opportunities for optimization.</p>
-          </article>
-          <article class="service-card">
-            <h3 class="service-title">Technical Mentorship</h3>
-            <p class="service-description">One-on-one guidance for aspiring developers. Personalized learning paths, code reviews, and career advice to accelerate your growth.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section class="how-it-works-section" id="how-it-works">
-      <div class="section-container">
-        <h2 class="section-title">How It Works</h2>
-        <p class="how-it-works-intro">A simple, streamlined process to get your project from idea to launch.</p>
-        <div class="steps-grid">
-          <article class="step-card">
-            <span class="step-number">1</span>
-            <h3 class="step-title">Discovery Call</h3>
-            <p class="step-description">We start with a free consultation to understand your goals, timeline, and budget. No commitment—just a conversation.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">2</span>
-            <h3 class="step-title">Plan & Build</h3>
-            <p class="step-description">I create a clear roadmap and get to work. You'll receive regular updates and have opportunities to provide feedback along the way.</p>
-          </article>
-          <article class="step-card">
-            <span class="step-number">3</span>
-            <h3 class="step-title">Launch & Support</h3>
-            <p class="step-description">Your project goes live with full documentation and training. I stick around to ensure everything runs smoothly.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work With Me Section -->
-    <section class="work-with-me-section" id="work-with-me">
-      <div class="section-container">
-        <h2 class="section-title">Work With Me</h2>
-        <div class="work-with-me-content">
-          <p class="work-with-me-pitch">
-            Are you a <strong>local service contractor</strong>—plumber, electrician, landscaper, or tradesperson—looking to grow your business online? I specialize in helping contractors like you get found by more customers and streamline your operations with custom digital solutions.
-          </p>
-          <div class="work-with-me-services">
-            <h3 class="work-with-me-subtitle">What I Can Build For You</h3>
-            <ul class="work-with-me-list">
-              <li class="work-with-me-item">Professional websites that showcase your work and build trust</li>
-              <li class="work-with-me-item">Online booking and scheduling systems</li>
-              <li class="work-with-me-item">Customer quote request forms</li>
-              <li class="work-with-me-item">Google Business Profile optimization</li>
-              <li class="work-with-me-item">Mobile-friendly designs that work on any device</li>
-            </ul>
-          </div>
-          <p class="work-with-me-closing">
-            No jargon, no unnecessary complexity—just straightforward solutions that help you win more jobs.
-          </p>
-          <a href="mailto:b.corbett.prof@gmail.com" class="work-with-me-cta">Get a Free Consultation</a>
-        </div>
-      </div>
-    </section>
-
-<section class="pricing-section" id="pricing">
-  <div class="section-container">
-    <h2 class="section-title">Project Investment</h2>
-    <p class="pricing-intro">
-      Every project is unique. These ranges help set expectations and ensure we’re a good fit.
-    </p>
-
-    <div class="pricing-grid">
-      <article class="pricing-card">
-        <h3 class="pricing-title">Starter Website</h3>
-        <p class="pricing-range">Typically $1,000 – $2,500</p>
-        <p class="pricing-description">
-          Ideal for small businesses or solo founders who need a professional online presence that converts visitors into leads.
-        </p>
-      </article>
-
-      <article class="pricing-card pricing-card-featured">
-        <h3 class="pricing-title">Growth Project</h3>
-        <p class="pricing-range">Typically $2,500 – $6,000</p>
-        <p class="pricing-description">
-          For growing businesses that need custom functionality, optimized performance, and a scalable foundation.
-        </p>
-      </article>
-
-      <article class="pricing-card">
-        <h3 class="pricing-title">Custom Build</h3>
-        <p class="pricing-range">Starting at $6,000+</p>
-        <p class="pricing-description">
-          Complex applications, integrations, or long-term development partnerships tailored to your exact needs.
-        </p>
-      </article>
-    </div>
-
-    <p class="pricing-note">
-      Final pricing depends on scope, timeline, and requirements. We’ll confirm everything before any work begins.
-    </p>
-  </div>
-</section>
-
-    
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-      <div class="section-container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="contact-intro">Have a project in mind or just want to connect? I'd love to hear from you.</p>
-        <div class="contact-methods">
-          <a href="mailto:b.corbett.prof@gmail.com" class="contact-link contact-email">
-            <span class="contact-label">Email</span>
-            <span class="contact-value">b.corbett.prof@gmail.com</span>
-          </a>
-          <a href="https://github.com/brendanrcorbett-netizen" class="contact-link contact-github">
-            <span class="contact-label">GitHub</span>
-            <span class="contact-value">@brendanrcorbett-netizen</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <p class="footer-text">&copy; 2026 Brendan Corbett. Crafted with care and clean code.</p>
-      <nav class="footer-nav">
-        <ul class="footer-nav-list">
-          <li class="footer-nav-item"><a href="#hero" class="footer-nav-link">Back to Top</a></li>
-          <li class="footer-nav-item"><a href="https://github.com/brendanrcorbett-netizen" class="footer-nav-link">GitHub</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<!-- Contractor Demo Card Link (High Visibility) -->
+<style>
+.card-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #3498ef 0%, #6be585 100%);
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    box-shadow: 0 4px 12px rgba(52, 152, 239, 0.15), 0 2px 4px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 480px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+}
+.card-link:hover, .card-link:focus {
+    background: linear-gradient(125deg, #2467ca 0%, #38bfa7 100%);
+    box-shadow: 0 6px 18px rgba(52, 152, 239, 0.23), 0 2px 6px rgba(0,0,0,0.15);
+    transform: translateY(-2px) scale(1.03);
+    color: #fff;
+    outline: none;
+}
+</style>
+<div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:2.5rem;">
+  <a class="card-link" href="/projects/plumber-template/index.html" target="_blank" rel="noopener noreferrer">
+    View Contractor Demo
+  </a>
+</div>
+<!-- End Contractor Demo Card Link -->
+<!-- Original content below -->
+<!-- PLEASE manually merge remaining site content below with existing index.html to avoid overwriting -->
