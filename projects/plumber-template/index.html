@@ -17,13 +17,24 @@
 
     <main>
         <section class="hero">
-            <div class="container">
-                <h1>Emergency Plumber in {{CITY}}</h1>
-                <p class="hero-subtitle">Fast, reliable service when you need it most. Licensed professionals available 24/7.</p>
-                <p class="availability-text" id="availabilityText">Available for emergency calls</p>
-                <a href="tel:{{PHONE}}" class="cta-button" id="heroButton">📞 Call Now</a>
-            </div>
-        </section>
+  <div class="pipe pipe-top"></div>
+
+  <div class="container">
+    <h1>Emergency Plumber in {{CITY}}</h1>
+    <p class="hero-subtitle">
+      Fast, reliable service from licensed professionals.
+    </p>
+
+    <p class="availability-text" id="availabilityText"></p>
+
+    <a href="tel:{{PHONE}}" class="cta-button" id="heroButton">
+      📞 Call Now <span class="cta-status"></span>
+    </a>
+  </div>
+
+  <div class="pipe pipe-bottom"></div>
+</section>
+
 
         <section class="trust">
             <div class="container">
