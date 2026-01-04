@@ -1,37 +1,258 @@
-<!-- Contractor Demo Card Link (High Visibility) -->
-<style>
-.card-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #3498ef 0%, #6be585 100%);
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.5rem;
-    padding: 2rem;
-    border-radius: 1.2rem;
-    box-shadow: 0 4px 12px rgba(52, 152, 239, 0.15), 0 2px 4px rgba(0,0,0,0.08);
-    transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
-    margin: 2rem auto;
-    width: 100%;
-    max-width: 480px;
-    text-align: center;
-    text-decoration: none;
-    letter-spacing: 0.01em;
-}
-.card-link:hover, .card-link:focus {
-    background: linear-gradient(125deg, #2467ca 0%, #38bfa7 100%);
-    box-shadow: 0 6px 18px rgba(52, 152, 239, 0.23), 0 2px 6px rgba(0,0,0,0.15);
-    transform: translateY(-2px) scale(1.03);
-    color: #fff;
-    outline: none;
-}
-</style>
-<div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:2.5rem;">
-  <a class="card-link" href="/projects/plumber-template/index.html" target="_blank" rel="noopener noreferrer">
-    View Contractor Demo
-  </a>
-</div>
-<!-- End Contractor Demo Card Link -->
-<!-- Original content below -->
-<!-- PLEASE manually merge remaining site content below with existing index.html to avoid overwriting -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Brendan Corbett | Web Solutions for Small Businesses</title>
+  <meta name="description" content="I design and build modern, conversion-focused websites for small businesses and contractors." />
+
+  <!-- Main Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Theme Script (placed early to prevent flash) -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ================= Header ================= -->
+  <header class="site-header">
+    <div class="header-container">
+
+      <a href="#home" class="logo">Brendan Corbett</a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="#about">About</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Theme Toggle -->
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Toggle dark mode"
+        type="button"
+      >
+        <span class="theme-toggle-icon" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- ================= Main ================= -->
+  <main class="main-content" id="home">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <div class="hero-eyebrow">Web Developer</div>
+        <h1 class="hero-title">Modern Websites That Convert</h1>
+        <p class="hero-subtitle">For contractors & small businesses</p>
+        <p class="hero-statement">
+          I build <strong>clean, fast, and trustworthy websites</strong> that help
+          small businesses get more calls, more leads, and more revenue.
+        </p>
+        <a href="#projects" class="hero-cta">View My Work</a>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="about-section">
+      <div class="section-container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <p class="about-text">
+            I specialize in building practical, results-driven websites for
+            small businesses that want a strong online presence without
+            unnecessary complexity.
+          </p>
+          <p class="about-text">
+            My focus is on clarity, performance, and real-world usability —
+            especially for service-based businesses like contractors.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="skills-section">
+      <div class="section-container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <h3 class="skill-category">Frontend</h3>
+            <ul class="skill-list">
+              <li class="skill-item">HTML5 & Semantic Markup</li>
+              <li class="skill-item">Modern CSS & Responsive Design</li>
+              <li class="skill-item">Vanilla JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-category">UX & Conversion</h3>
+            <ul class="skill-list">
+              <li class="skill-item">Mobile-first layouts</li>
+              <li class="skill-item">Clear CTAs & flow</li>
+              <li class="skill-item">Accessibility best practices</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-category">Delivery</h3>
+            <ul class="skill-list">
+              <li class="skill-item">GitHub Pages</li>
+              <li class="skill-item">Fast iteration</li>
+              <li class="skill-item">Client-focused outcomes</li>
+            </ul>
+          </div>
+
+          <div class="skill-card">
+            <h3 class="skill-category">Automation</h3>
+            <ul class="skill-list">
+              <li class="skill-item">AI-assisted workflows</li>
+              <li class="skill-item">Template-based builds</li>
+              <li class="skill-item">Scalable site structures</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Projects ===== -->
+    <section id="projects" class="projects-section">
+      <div class="section-container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+
+          <!-- Plumber Demo -->
+          <article class="project-card">
+            <div class="project-image-placeholder"></div>
+            <div class="project-content">
+              <h3 class="project-title">Plumber Website Demo</h3>
+              <p class="project-description">
+                A conversion-focused demo website designed for local plumbing
+                businesses to generate more calls and service requests.
+              </p>
+
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="projects/plumber-template/index.html"
+                >
+                  Live Demo
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Services ===== -->
+    <section id="services" class="services-section">
+      <div class="section-container">
+        <h2 class="section-title">Services</h2>
+
+        <p class="services-intro">
+          Simple, effective web solutions tailored for small businesses.
+        </p>
+
+        <div class="services-grid">
+
+          <div class="service-card">
+            <h3 class="service-title">Business Websites</h3>
+            <p class="service-description">
+              Clean, professional websites designed to build trust and convert visitors.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">Landing Pages</h3>
+            <p class="service-description">
+              Focused pages built to drive calls, bookings, or inquiries.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">Website Redesigns</h3>
+            <p class="service-description">
+              Modern upgrades for outdated or underperforming sites.
+            </p>
+          </div>
+
+          <div class="service-card">
+            <h3 class="service-title">Templates & Demos</h3>
+            <p class="service-description">
+              Reusable site templates for contractors and service businesses.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact-section">
+      <div class="section-container">
+        <h2 class="section-title">Contact</h2>
+
+        <p class="contact-intro">
+          Interested in working together? Let’s talk.
+        </p>
+
+        <div class="contact-methods">
+
+          <a class="contact-link" href="mailto:your@email.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">your@email.com</span>
+          </a>
+
+          <a class="contact-link" href="#">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">United States</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        © <span id="year"></span> Brendan Corbett
+      </p>
+
+      <ul class="footer-nav-list">
+        <li><a class="footer-nav-link" href="#home">Home</a></li>
+        <li><a class="footer-nav-link" href="#projects">Projects</a></li>
+        <li><a class="footer-nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
